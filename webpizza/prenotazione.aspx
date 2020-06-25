@@ -60,9 +60,9 @@
             <tr>  
                 <td> </td>
                 <td style="text-align: center">  
-                    <asp:Label ID="Label8" runat="server" Font-Size="X-Large" Text="Prenotazioni Attive"></asp:Label>
+                    <asp:Label ID="Label8" runat="server" Font-Size="X-Large" Text="Prenotazioni Attive" Visible="False"></asp:Label>
                 <td> 
-                    <asp:GridView ID="GridView1" runat="server">
+                    <asp:GridView ID="GridView1" runat="server" Visible="False">
                     </asp:GridView>
                 </td>  
                 <td> </td>  
