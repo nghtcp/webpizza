@@ -69,11 +69,15 @@
   <ItemGroup>
     <Content Include="css\bootstrap-4.3.1.css" />
     <Content Include="images\140X140.gif" />
+    <Content Include="images\bg_2.jpg" />
     <Content Include="js\bootstrap-4.3.1.js" />
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="registrazione.aspx" />
+    <Content Include="prenotazione.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +87,27 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrazione.aspx.cs">
+      <DependentUpon>registrazione.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrazione.aspx.designer.cs">
+      <DependentUpon>registrazione.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="prenotazione.aspx.cs">
+      <DependentUpon>prenotazione.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="prenotazione.aspx.designer.cs">
+      <DependentUpon>prenotazione.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
