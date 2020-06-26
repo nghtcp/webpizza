@@ -17,10 +17,11 @@ namespace webpizza
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MainDB"].ToString());
         int postiliberi;
         DateTime dataposti;
+        string uid;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string uid = Request.QueryString["uid"];
+            uid = Request.QueryString["uid"];
             Label6.Text = uid;
             try
             {
@@ -60,21 +61,22 @@ namespace webpizza
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            postiliberi = 20;
             DateTime dataprenotazione = Calendar1.SelectedDate;
 
             con.Open();
-            string qry = "select * from posti";
+            string qry = "select * from posti where data='"+ dataprenotazione.ToString("yyyy-MM-dd")+"'";
             SqlCommand cmd = new SqlCommand(qry, con);
             SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             int numpersone = int.Parse(TextBox1.Text);
-            if (reader.HasRows)
-            {
+            //if (reader.HasRows)
+            //{
                 while (reader.Read())
                 {
                     postiliberi = reader.GetInt32(0);
                     dataposti = reader.GetDateTime(1);
                 }
-                if ((postiliberi - numpersone) <= 0)
+                if ((postiliberi - numpersone) < 0)
                 {
                     Label4.Text=("Posti esauriti !!!!");
                     con.Close();
@@ -83,15 +85,22 @@ namespace webpizza
                 {
                     con.Close();
                     con.Open();
-                    /* INSERT INTO posti(posti,data) VALUES (postiliberi-numeropersone,data) ON DUPLICATE KEY UPDATE posti=(postiliberi-numeropersone) */
-                    string query = "INSERT INTO posti posti=" + (postiliberi - numpersone).ToString() + " WHERE data='"+dataprenotazione.ToString("yyyy-MM-dd")+"'"+" ON DUPLICATE KEY UPDATE";
+                    string query = "UPDATE dbo.posti SET posti=" + (postiliberi - int.Parse(TextBox1.Text)) + ", data='" + dataprenotazione.ToString("yyyy-MM-dd") + "' WHERE data='" + dataprenotazione.ToString("yyyy-MM-dd") + "' IF @@ROWCOUNT =0 INSERT INTO posti(posti,data) VALUES (" + (postiliberi- int.Parse(TextBox1.Text)) + ",'" + dataprenotazione.ToString("yyyy-MM-dd") + "')";
                     SqlCommand comando = new SqlCommand(query, con);
                     comando.ExecuteNonQuery();
                     con.Close();
+                    con.Open();
+                    query = "INSERT INTO dbo.tavoli (uid,numpers,datap) VALUES ('" + uid + "'," + numpersone + ",'" + dataprenotazione.ToString("yyyy-MM-dd") + "')";
+                    comando = new SqlCommand(query, con);
+                    comando.ExecuteNonQuery();
+
+                    con.Close();
+
+
                     Label4.Text = "Prenotazione Presa!";
 
                 }
-            }
+            //}
             
 
             con.Close();

@@ -27,7 +27,7 @@
                     <asp:Label ID="Label5" runat="server" Font-Size="X-Large" Text="Utente"></asp:Label>  
                 </td>  
                 <td style="text-align: center">  
-                    <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="Label6" runat="server" Font-Size="X-Large" Text="Label"></asp:Label>
                 </td>  
                 <td> </td>  
                 <td> </td>  
@@ -73,7 +73,7 @@
                 <td> </td>  
                 <td> </td>  
                 <td style="text-align: center">  
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Prenota" />
+                    <asp:Button ID="Button1" runat="server" Font-Size="X-Large" OnClick="Button1_Click" Text="Prenota" />
                 </td>  
                 <td> </td>  
                 <td> </td>  

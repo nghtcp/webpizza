@@ -78,6 +78,7 @@
     <Content Include="login.aspx" />
     <Content Include="registrazione.aspx" />
     <Content Include="prenotazione.aspx" />
+    <Content Include="gestione.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="prenotazione.aspx.designer.cs">
       <DependentUpon>prenotazione.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gestione.aspx.cs">
+      <DependentUpon>gestione.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gestione.aspx.designer.cs">
+      <DependentUpon>gestione.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

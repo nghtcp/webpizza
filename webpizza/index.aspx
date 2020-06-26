@@ -2,19 +2,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"/>
 <head runat="server">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Bootstrap Agency Page Template</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet"/>
 </head>
 <body>
     <form id="form1" runat="server">
     <header>
-      <div class="jumbotron" style="background-image: url(../images/bg_1.jpg">
+      <div class="jumbotron" style="background-image: url(../images/bg_1.jpg)>
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -40,32 +40,32 @@
       <div class="container ">
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-1.jpg" data-holder-rendered="true">
+            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-1.jpg" data-holder-rendered="true"/>
             <h3>Lorem ipsum</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-2.jpg" data-holder-rendered="true">
+            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-2.jpg" data-holder-rendered="true"/>
             <h3>Lorem ipsum dolor</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-3.jpg" data-holder-rendered="true">
+            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-3.jpg" data-holder-rendered="true"/>
             <h3>Lorem ipsum dolor</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-4.jpg" data-holder-rendered="true">
+            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-4.jpg" data-holder-rendered="true"/>
             <h3>Lorem ipsum</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-5.jpg" data-holder-rendered="true">
+            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-5.jpg" data-holder-rendered="true"/>
             <h3>Lorem ipsum dolor</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-6.jpg" data-holder-rendered="true">
+            <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/pizza-6.jpg" data-holder-rendered="true"/>
             <h3>Lorem ipsum</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
           </div>
@@ -113,6 +113,4 @@
     <script src="js/popper.min.js"></script> 
     <script src="js/bootstrap-4.3.1.js"></script>
   </body>
-    </form>
-</body>
-</html>
+
