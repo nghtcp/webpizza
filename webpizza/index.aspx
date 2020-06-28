@@ -14,15 +14,14 @@
 <body>
     <form id="form1" runat="server">
     <header>
-      <div class="jumbotron" style="background-image: url(../images/bg_1.jpg)>
+      <div class="jumbotron" style="background-image: url(./images/bg_1.jpg)">
         <div class="container">
           <div class="row">
             <div class="col-12">
               <h1 class="text-center" style="color: white">PIZZA CAMERANA</h1>
               <p class="text-center" style="color: white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, dicta, cupiditate consequatur necessitatibus quos libero eius ipsum qui sit molestiae.</p>
-              <p>&nbsp;</p>
               <p class="text-center">
-                  <asp:Button ID="Button1" runat="server" BackColor="#3366FF" Font-Size="Larger" ForeColor="White" Height="47px" Text="Login" Width="128px" />
+                  <asp:Button ID="Button1" runat="server" BackColor="#3366FF" Font-Size="Larger" ForeColor="White" Height="47px" Text="Login" Width="128px" OnClick="Button1_Click" />
                 </p>
             </div>
           </div>
@@ -75,11 +74,11 @@
         <div class="container">
           <div class="row">
             <div class="text-center col-md-8 col-12 mx-auto">
-              <p class="lead">Ciao ciao</p>
+              <p class="lead"></p>
             </div>
           </div>
               <p class="text-center">
-                  <asp:Button ID="Button2" runat="server" BackColor="#00CC00" Font-Size="Larger" ForeColor="White" Height="47px" Text="Registrati" Width="128px" />
+                  <asp:Button ID="Button2" runat="server" BackColor="#00CC00" Font-Size="Larger" ForeColor="White" Height="47px" Text="Registrati" Width="128px" OnClick="Button2_Click1" />
                 </p>
         </div>
       </div>

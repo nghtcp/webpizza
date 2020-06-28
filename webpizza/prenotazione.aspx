@@ -74,6 +74,7 @@
                 <td> </td>  
                 <td style="text-align: center">  
                     <asp:Button ID="Button1" runat="server" Font-Size="X-Large" OnClick="Button1_Click" Text="Prenota" />
+                    <asp:Button ID="Button2" runat="server"  Font-Size="X-Large" Text="Home" OnClick="Button2_Click" />
                 </td>  
                 <td> </td>  
                 <td> </td>  

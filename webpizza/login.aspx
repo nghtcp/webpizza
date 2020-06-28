@@ -9,6 +9,9 @@
         .auto-style1 {  
             width: 100%;  
         }  
+        .auto-style2 {
+            height: 23px;
+        }
     </style>  
 </head>  
 <body>
@@ -46,18 +49,19 @@
                 <td> </td>  
             </tr>  
             <tr>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
+                <td class="auto-style2"> </td>  
+                <td class="auto-style2"> </td>  
+                <td class="auto-style2"> </td>  
+                <td class="auto-style2"> </td>  
+                <td class="auto-style2"> </td>  
+                <td class="auto-style2"> </td>  
             </tr>  
             <tr>  
                 <td> </td>  
                 <td> </td>  
                 <td style="text-align: center">  
                     <asp:Button ID="Button1" runat="server" Font-Size="X-Large" OnClick="Button1_Click" Text="Log In" />  
+                    <asp:Button ID="Button4" runat="server" Font-Size="X-Large" Text="Home" OnClick="Button4_Click" />
                 </td>  
                 <td> </td>  
                 <td> </td>  

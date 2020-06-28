@@ -20,5 +20,15 @@ namespace webpizza
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./login.aspx");
+        }
+
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("./registrazione.aspx");
+        }
     }
 }

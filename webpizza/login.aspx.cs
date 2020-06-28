@@ -28,7 +28,7 @@ namespace webpizza
                 string pass = TextBox2.Text;
                 
                 con.Open();
-                string qry = "select * from Ulogin where UserId='" + uid + "' and Password='" + pass + "'";
+                string qry = "select * from [dbo].Ulogin where UserId='" + uid + "' and Password='" + pass + "'";
                 SqlCommand cmd = new SqlCommand(qry, con);
                 SqlDataReader sdr = cmd.ExecuteReader();
                 if (sdr.Read())
@@ -69,6 +69,12 @@ namespace webpizza
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./index.aspx");
 
         }
     }

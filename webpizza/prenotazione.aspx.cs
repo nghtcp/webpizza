@@ -113,5 +113,10 @@ namespace webpizza
             /*Label4.Text = Calendar1.SelectedDate.ToString("dd-MMM-yyyy");*/
 
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./index.aspx");
+        }
     }
 }
