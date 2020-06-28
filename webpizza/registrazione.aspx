@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">  
+<head runat="server">
+     <title>LogInPage</title>  
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet"/>
     <title></title>  
     <style type="text/css">  
         .auto-style1 {  
@@ -13,6 +15,19 @@
 </head>  
 <body>
         <form id="form1" runat="server">  
+            <header>
+          <div style="background-image: url(../images/bg_1.jpg")>
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <h1 class="text-center" style="color: white">PIZZA CAMERANA</h1>
+                  <p class="text-center" style="color: white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, dicta, cupiditate consequatur necessitatibus quos libero eius ipsum qui sit molestiae.</p>
+                  <p>&nbsp;</p>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </header>
     <div>  
       
         <table class="auto-style1">  
