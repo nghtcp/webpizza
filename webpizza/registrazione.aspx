@@ -4,9 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <title>LogInPage</title>  
+     <title>RegistrazionePage</title>  
     <link href="css/bootstrap-4.3.1.css" rel="stylesheet"/>
-    <title></title>  
     <style type="text/css">  
         .auto-style1 {  
             width: 100%;  
