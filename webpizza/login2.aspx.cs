@@ -12,115 +12,20 @@ using System.Data;
 
 namespace webpizza
 {
-    public partial class WebForm4 : System.Web.UI.Page
+    public partial class WebForm6 : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MainDB"].ToString());
-        int postiliberi;
-        DateTime dataposti;
         string uid;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            uid = Request.QueryString["uid"];
-            Label6.Text = uid;
-            if (!Page.IsPostBack)
+            uid = "andfer";
+            if (!IsPostBack)
             {
-                try
-                {
-                    PopulateGridview();
-                    //con.Open();
-                    //string qry = "select * from tavoli where uid='" + uid + "'";
-                    //SqlCommand cmd = new SqlCommand(qry, con);
-                    //SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-                    //if (reader.HasRows)
-                    //{
-                    //    GridView2.Visible = true;
-                    //    Label8.Visible = true;
-                    //    GridView2.DataSource = reader;
-                    //    GridView2.DataBind();
-                    //}
-
-                    //con.Close();
-
-                    //    Label4.Text = "Login Sucess......!!";
-                    //    logged = true;
-                    //    Button2.Visible = true;
-                    //}
-                    //else
-                    //{
-                    //    Label4.Text = "UserId & Password Is not correct Try again..!!";
-                    //    logged = false;
-                    //    Button2.Visible = false;
-
-                    //}
-                }
-                catch (Exception ex)
-                {
-                    Response.Write(ex.Message);
-                }
+                PopulateGridview();
             }
-        }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            postiliberi = 20;
-            DateTime dataprenotazione = Calendar1.SelectedDate;
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MainDB"].ToString());
-
-            con.Open();
-            string qry = "select * from posti where data='"+ dataprenotazione.ToString("yyyy-MM-dd")+"'";
-            SqlCommand cmd = new SqlCommand(qry, con);
-            SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-            int numpersone = int.Parse(TextBox1.Text);
-            //if (reader.HasRows)
-            //{
-                while (reader.Read())
-                {
-                    postiliberi = reader.GetInt32(0);
-                    dataposti = reader.GetDateTime(1);
-                }
-                if ((postiliberi - numpersone) < 0)
-                {
-                    Label4.Text=("Posti esauriti !!!!");
-                    con.Close();
-                }
-                else
-                {
-                    con.Close();
-                    con.Open();
-                    string query = "UPDATE dbo.posti SET posti=" + (postiliberi - int.Parse(TextBox1.Text)) + ", data='" + dataprenotazione.ToString("yyyy-MM-dd") + "' WHERE data='" + dataprenotazione.ToString("yyyy-MM-dd") + "' IF @@ROWCOUNT =0 INSERT INTO posti(posti,data) VALUES (" + (postiliberi- int.Parse(TextBox1.Text)) + ",'" + dataprenotazione.ToString("yyyy-MM-dd") + "')";
-                    SqlCommand comando = new SqlCommand(query, con);
-                    comando.ExecuteNonQuery();
-                    con.Close();
-                    con.Open();
-                    query = "INSERT INTO dbo.tavoli (uid,numpers,datap) VALUES ('" + uid + "'," + numpersone + ",'" + dataprenotazione.ToString("yyyy-MM-dd") + "')";
-                    comando = new SqlCommand(query, con);
-                    comando.ExecuteNonQuery();
-
-                    con.Close();
-
-                    PopulateGridview();
-
-                    Label4.Text = "Prenotazione Presa!";
-
-                }
-            //}
-            
-
-            con.Close();
-
-
-
-
-
-            /*DateTime dataprenotazione = Calendar1.SelectedDate;*/
-            /*Label4.Text = Calendar1.SelectedDate.ToString("dd-MMM-yyyy");*/
-
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("./index.aspx");
         }
 
         void PopulateGridview()
@@ -129,12 +34,11 @@ namespace webpizza
             using (con)
             {
                 con.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM tavoli WHERE uid='" + uid + "'", con);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM tavoli WHERE uid='"+uid+"'", con);
                 sqlDa.Fill(dtbl);
             }
             if (dtbl.Rows.Count > 0)
             {
-                GridView2.Visible = true;
                 GridView2.DataSource = dtbl;
                 GridView2.DataBind();
             }
@@ -225,8 +129,8 @@ namespace webpizza
         {
             //try
             //{
-            using (con)
-            {
+                using (con)
+                {
                 con.Open();
                 string query = "DELETE FROM tavoli WHERE id = @id";
                 SqlCommand sqlCmd = new SqlCommand(query, con);
@@ -240,13 +144,12 @@ namespace webpizza
 
                 GridView2.EditIndex = -1;
 
-                PopulateGridview();
-                Label4.Text = "";
-                lblSuccessMessage.Text = "Selected Record Deleted";
-                lblErrorMessage.Text = "";
+                    PopulateGridview();
+                    lblSuccessMessage.Text = "Selected Record Deleted";
+                    lblErrorMessage.Text = "";
 
 
-            }
+                }
             //}
             //catch (Exception ex)
             //{
@@ -255,5 +158,11 @@ namespace webpizza
             //}
             con.Close();
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./index.aspx");
+        }
     }
+
 }

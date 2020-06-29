@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gestione.aspx.cs" Inherits="webpizza.WebForm5" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login2.aspx.cs" Inherits="webpizza.WebForm6" %>
 
 <!DOCTYPE html>
 
@@ -81,7 +81,7 @@
                             <asp:TextBox ID="txtuid" Text='<%# Eval("uid") %>' runat="server" />
                         </EditItemTemplate>
                         <FooterTemplate>
-<%--                            <asp:TextBox ID="txtuidFooter" runat="server" />--%>
+                            <asp:TextBox ID="txtuidFooter" runat="server" />
                         </FooterTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Numero Posti">
@@ -92,7 +92,7 @@
                             <asp:TextBox ID="txtnumpers" Text='<%# Eval("numpers") %>' runat="server" />
                         </EditItemTemplate>
                         <FooterTemplate>
-<%--                            <asp:TextBox ID="txtnumpersFooter" runat="server" />--%>
+                            <asp:TextBox ID="txtnumpersFooter" runat="server" />
                         </FooterTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="datap">
@@ -103,12 +103,12 @@
                             <asp:TextBox ID="txtdatap" Text='<%# Eval("datap") %>' runat="server" />
                         </EditItemTemplate>
                         <FooterTemplate>
-<%--                            <asp:TextBox ID="txtdatapFooter" runat="server" />--%>
+                            <asp:TextBox ID="txtdatapFooter" runat="server" />
                         </FooterTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField>
                         <ItemTemplate>
-<%--                            <asp:ImageButton ImageUrl="~/Images/edit.png" runat="server" CommandName="Edit" ToolTip="Edit" Width="20px" Height="20px"/>--%>
+                            <asp:ImageButton ImageUrl="~/Images/edit.png" runat="server" CommandName="Edit" ToolTip="Edit" Width="20px" Height="20px"/>
                             <asp:ImageButton ImageUrl="~/Images/delete.png" runat="server" CommandName="Delete" ToolTip="Delete" Width="20px" Height="20px"/>
                         </ItemTemplate>
                         <EditItemTemplate>
@@ -116,7 +116,7 @@
                             <asp:ImageButton ImageUrl="~/Images/cancel.png" runat="server" CommandName="Cancel" ToolTip="Cancel" Width="20px" Height="20px"/>
                         </EditItemTemplate>
                         <FooterTemplate>
-<%--                            <asp:ImageButton ImageUrl="~/Images/addnew.png" runat="server" CommandName="AddNew" ToolTip="Add New" Width="20px" Height="20px"/>--%>
+                            <asp:ImageButton ImageUrl="~/Images/addnew.png" runat="server" CommandName="AddNew" ToolTip="Add New" Width="20px" Height="20px"/>
                         </FooterTemplate>
                     </asp:TemplateField>
                 </Columns>
